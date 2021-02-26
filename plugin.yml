@@ -1,0 +1,9 @@
+name: dgZrzut
+version: ${project.version}
+main: pl.inder00.dghc.zrzut.Core
+authors: ["Inder00"]
+description: Plugin na zrzuty
+softdepend: ["HolographicDisplays"]
+commands:
+  zrzut:
+    description: Informacje o aktualnych zrzutach

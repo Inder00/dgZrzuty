@@ -1,0 +1,115 @@
+# Wyglad hologramu nad zrzutem
+hologramic:
+- "&5&lMAGICZNY ZRZUT"
+- "&7Kliknij &6PPM&7, aby otworzyc!"
+
+# Wyglad napisu pod hologramem, z przejmowaniem
+takingOver: "&7Przejmowanie &6{PERCENT}%..."
+
+# Wiadomosc, o pojawieniu sie zrzutu
+# Zmienne: {X}, {Y}, {Z}
+broadcast: "&8{>} &7Na mapie pojawil sie &6Magiczny zrzut &8(&7x: &a{X}&7, y: &a{Y}&7, z: &a{Z}&8)"
+
+# Lista zrzutów pod komenda /zrzut
+zrzut-command:
+
+  # Wiadomość, nie ma aktualnie żadnych zrzutów
+  nothing: "&cAktualnie nie ma zadnych zrzutow"
+
+  # "Przed wiadomosc" przed listą zrzutów
+  behind-zrzut:
+  - '&8{>} &7Lista dostepnych &6zrzutow &7na serwerze!'
+  - '&a&k|||&r &cPamietaj, ze podane koordynaty nie sa dokladne &a&k|||&r'
+
+  # Zmienne:
+  # {NUMBER}, {X}, {Y}, {Z}
+  # Kordy nie sa dokladne!
+  style: "&a{NUMBER}. &7x: &a{X}&7, &7y: &a{Y}&7, z: &a{Z}"
+
+# Konfiguracja flary (sluzy do respienia zrzutów)
+flara:
+  id: STICK
+  data: 0
+  name: "&a&k|||&r &cFlara zrzutu premium &a&k|||&r"
+  lore:
+  - '&8{.} &7Przywoluje zrzut w poblizu Ciebie'
+
+# Wiadomosc, rozdania danemu graczowi flary (/zrzut give <nick>)
+got-player:
+  title: "&a&k|||&r &6Zrzut &a&k|||&r"
+  subtitle: "&7Orzymales &6Flara zrzutu premium &7od &6{ADMIN}"
+
+# Wiadomosc, rozdania kazdemu flary (/zrzut give all)
+got-everyone:
+  title: "&a&k|||&r &6Zrzut &a&k|||&r"
+  subtitle: "&7Caly serwer otrzymal &6Flara zrzutu premium &7od &6{ADMIN}"
+
+# Wiadomosc, o użyciu przez danego gracza flary
+# Zmienne: {PLAYER}
+used-flara: "&8{>} &7Gracz &6{PLAYER} &7przywowal &6zrzut premium"
+
+# Konfiguracja zrzutów
+zrzuty:
+
+  # Minimalna ilość graczy aby się zrespił zrzut
+  min-players: 10
+
+  # Maksymalna ilość zrzutów na mapie
+  max-drops: 10
+
+  # Odstęp, po między respieniem się zrzutów
+  interval: 3600 # 1 godzina
+
+# Konfiguracja światu
+world:
+
+  # Obszar na ktorym maja byc respiony zrzuty
+  map-size: 2000
+
+  # Swiat, w ktorym beda spawnowane zrzuty
+  world: 'world'
+
+# Konfiguracja dropu
+drop:
+
+  # Ilości
+  amount:
+
+    # Minimalna ilość dropów, ze skrzynki
+    min: 7
+
+    # Maksymalna ilość dropów, ze skrzynki
+    max: 14
+
+  # Lista dropów
+  # Wymagane pola:
+  # id (nazwa z duzej litery), amount (ilość), data (id drugorzędne)
+  # Dodatkowe pola:
+  # name (nazwa przedmiotu), enchantments (enchanty)
+  list:
+    # Klucz (jablko)
+    jablko:
+      # id (nazwa z duzej litery)
+      id: APPLE
+      # Ilosc
+      amount: 1
+      # Data (id drugorzędne)
+      data: 0
+    kox:
+      id: GOLDEN_APPLE
+      amount: 1
+      data: 1
+      name: '&6&lMutanted Apple'
+    kilof:
+      id: DIAMOND_PICKAXE
+      amount: 1
+      data: 0
+      enchantments:
+      - 'fortune:5'
+    pandora:
+      id: DRAGON_EGG
+      amount: 1
+      data: 0
+      name: '&e&lPANDORA'
+      enchantments:
+      - 'unbreaking:10'
